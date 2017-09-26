@@ -1,6 +1,6 @@
 ﻿namespace Lowest_Cost_First_Search
 {
-    partial class ChooseNodeName
+    partial class InputForm
     {
         /// <summary>
         /// Required designer variable.

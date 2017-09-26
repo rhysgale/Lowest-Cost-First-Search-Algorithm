@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Lowest_Cost_First_Search
 {
-    public partial class ChooseNodeName : Form
+    public partial class InputForm : Form
     {
         public string _NodeName;
         public int _Distance;
         bool _DistanceNeeded;
 
-        public ChooseNodeName(bool distance)
+        public InputForm(bool distance)
         {
             InitializeComponent();
             this._DistanceNeeded = distance;

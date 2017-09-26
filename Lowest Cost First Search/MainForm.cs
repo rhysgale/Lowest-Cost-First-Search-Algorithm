@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Lowest_Cost_First_Search
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //storage for the main part
         Vector2 _NodeSize;
@@ -19,7 +19,7 @@ namespace Lowest_Cost_First_Search
         Node _EndNode;
         Node _StartNode;
 
-        public Form1()
+        public MainForm()
         {
             _NodeSize = new Vector2(100, 25);
             _NodeList = new List<Node>();
@@ -332,7 +332,7 @@ namespace Lowest_Cost_First_Search
         //==========================Dynamically create nodes============================
         private void CreateNode(object sender, MouseEventArgs e)
         {
-            ChooseNodeName chooseName = new ChooseNodeName(false);
+            InputForm chooseName = new InputForm(false);
 
             int nodePosX = e.X;
             int nodePosY = e.Y;
@@ -366,7 +366,7 @@ namespace Lowest_Cost_First_Search
             else
             {
                 //we can create new path!
-                ChooseNodeName distance = new ChooseNodeName(true);
+                InputForm distance = new InputForm(true);
                 using (distance)
                 {
                     if (distance.ShowDialog() == DialogResult.OK)
